@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Student Portal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/82c4b53bff.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- (Optional) Use CSS or JS implementation -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="#" id="nav-brand" class="navbar-brand">Teacher Sign-Up</a>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-3">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Body -->
+    <form
+      action="/teacher/signup"
+      method="post"
+      onsubmit="event.preventDefault();"
+      name="myForm"
+      id="myForm"
+    >
+      <div class="container">
+        <div class="row p-4">
+          <div class="col-12">
+            <label for="username" class="form-label h5">Staff Name</label>
+          </div>
+          <div class="col-12">
+            <input
+              type="text"
+              name="staffName"
+              id="staff-name"
+              class="form-control shadow"
+              required
+            />
+            <div class="invalid-feedback">Invalid Staff Name</div>
+          </div>
+        </div>
+
+        <div class="row p-4">
+          <div class="col-12">
+            <label for="mobile" class="form-label h5">Mobile Number</label>
+          </div>
+          <div class="col-12 input-group">
+            <span class="input-group-text" id="inputGroupPrepend">+91</span>
+            <input
+              type="number"
+              name="mobileNumber"
+              id="mobile-number"
+              class="form-control shadow"
+            />
+            <div class="invalid-feedback">Invalid Mobile Number</div>
+          </div>
+        </div>
+
+        <div class="row p-4">
+          <div class="col-12">
+            <label for="department" class="form-label h5"
+              >Departments Handled</label
+            >
+          </div>
+          <div class="col-md-12 col-lg-4 mt-2">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="B.Sc.(C.S)"
+              id="flexCheckDefault"
+              name="departmentsHandled"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Bachelor Of Computer Science [B.Sc(C.S)]
+            </label>
+          </div>
+          <div class="col-md-12 col-lg-4 mt-2">
+            <input
+              class="form-check-input"
+              name="departmentsHandled"
+              type="checkbox"
+              value="B.C.A"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Bachelor Of Computer Applications [B.C.A]
+            </label>
+          </div>
+          <div class="col-md-12 col-lg-4 mt-2">
+            <input
+              class="form-check-input"
+              name="departmentsHandled"
+              type="checkbox"
+              value="B.Com(C.A)"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Bachelor of Commerce [B.Com(C.A)]
+            </label>
+          </div>
+        </div>
+
+        <div class="row p-4">
+          <div class="col-12">
+            <label for="username" class="form-label h5">Username</label>
+          </div>
+          <div class="col-12">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="form-control shadow"
+            />
+            <div class="invalid-feedback">
+              Invalid Username Username Should be of atleast 5 Characters
+            </div>
+          </div>
+        </div>
+
+        <div class="row p-4">
+          <div class="col-12">
+            <label for="password" class="form-label h5">Password</label>
+          </div>
+          <div class="col-12">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control shadow"
+            />
+            <div class="invalid-feedback">
+              Invalid Password , Password Should be of atleast 8 characters
+            </div>
+          </div>
+        </div>
+
+        <div class="row p-4">
+          <div class="col-12">
+            <label for="confirm-password" class="form-label h5"
+              >Confirm Password</label
+            >
+          </div>
+          <div class="col-12">
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              class="form-control shadow"
+            />
+            <div class="invalid-feedback">Password Doesn't Match</div>
+          </div>
+        </div>
+
+        <div class="row p-4">
+          <div class="col-12 lead text-center">
+            <p>Please Note Down your Username and Passoword</p>
+          </div>
+        </div>
+
+        <div class="row p-4">
+          <div class="col-12 text-center">
+            <input
+              id="signUp"
+              type="submit"
+              value="SIGN UP"
+              class="btn btn-lg btn-outline-dark rounded-pill mx-auto shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="container-fluid mt-3">
+      <div class="row bg-dark text-light">
+        <span class="text-center">
+          Copyright © Ramakrishna Mission Vivekananda College
+        </span>
+      </div>
+    </div>
+
+    <script src="scripts/teacher-signup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Student Portal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/82c4b53bff.js" crossorigin="anonymous"></script>
+    
+    <!-- (Optional) Use CSS or JS implementation -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+<style>
+
+  body{
+    background: linear-gradient(60deg,#3b3b3b,#0d0d0e);
+    height: 100%;
+  }
+
+  .container{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.card-body{
+  padding: 2%;
+  max-height: 40rem;
+  overflow-y: auto;
+}
+
+</style>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a href="#" id="nav-brand" class="navbar-brand">Notification</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-3">
+          <a href="/student/notification" class="nav-link">Notifications</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <div class="row mt-5">
+      <div class="card p-2 text-light border-dark" style="background: linear-gradient(60deg,#0d51e6,#740cc9);"> 
+        <div class="card-header h5 d-flex">
+          <div class="mx-auto"> <%= foundNotification. notificationTitle %> </div>
+        </div>
+        <div class="card-body">
+          <%= foundNotification.notificationMessage %>
+        </div>
+        <div class="card-footer d-flex">
+          <div class="">Posted By : Prof. <%= foundNotification.staffName %></div>
+          <div class="ms-auto"> On: <%= foundNotification.postedTime.toLocaleString("en-US") %></div>
+        </div>
+         </div>
+      </div>
+      </div>
+    </div>
+  </div>
+

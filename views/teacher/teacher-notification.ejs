@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Student Portal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/82c4b53bff.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- (Optional) Use CSS or JS implementation -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      form {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+
+    <script>
+      document.getElementsByTagName("body")[0].classList.add("bg-dark");
+      document.getElementsByTagName("body")[0].classList.add("text-light");
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <div class="container-fluid">
+        <a href="#" id="nav-brand" class="navbar-brand">Post Notification</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nb"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nb">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-3">
+              <a href="/teacher/postedNotification" class="nav-link"
+                >Posted Notifications</a
+              >
+            </li>
+
+            <li class="nav-item mx-3">
+              <a href="/teacher/home" class="nav-link">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Post Notification -->
+
+    <form action="/teacher/notification" method="post">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="Notification Title" class="form-label h5"
+                >Notification Title</label
+              >
+              <input
+                type="text"
+                name="notificationTitle"
+                required
+                class="form-control shadow"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-12">
+            <label for="" class="form-label h5">Notification Message</label>
+          </div>
+          <div class="p-2">
+            <textarea
+              name="notificationMessage"
+              id=""
+              cols="10"
+              rows="5"
+              class="form-control shadow"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="row mt-4 mx-auto justify-content-center">
+          <div class="col-4">
+            <div class="form-group">
+              <label for="department" class="h5">Department</label>
+            </div>
+            <div class="col-12">
+              <select name="department" id="" class="form-select">
+                <% department.forEach((e) => { %>
+                <option value="<%= e %>"><%= e %></option>
+                <% }) %>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4 mx-auto justify-content-center">
+          <div class="col-3">
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="year"
+                id=""
+                value="1"
+              />
+              <label class="form-check-label" for=""> 1st Year </label>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="year"
+                id=""
+                value="2"
+              />
+              <label class="form-check-label" for=""> 2nd Year </label>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="year"
+                id=""
+                value="3"
+              />
+              <label class="form-check-label" for=""> 3rd Year </label>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="year"
+                id=""
+                value="0"
+              />
+              <label class="form-check-label" for=""> For All</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="form-group">
+            <input
+              type="submit"
+              value="Post Notification"
+              class="btn btn-outline-info mt-4 mx-auto d-flex justify-content-center flex-nowrap"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div
+      class="container-fluid bg-dark text-light text-center mt-5"
+      style="position: absolute; bottom: 0"
+    >
+      <span class="">
+        Copyright © Ramakrishna Mission Vivekananda College
+      </span>
+    </div>
+  </body>
+
+  <footer class="footer fixed-bottm"></footer>
+</html>

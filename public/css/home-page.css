@@ -1,0 +1,50 @@
+nav {
+  padding: 4px;
+  text-align: center;
+}
+
+#welcome-text {
+  font-size: x-large;
+  background: -webkit-linear-gradient(75deg, #ffffff, rgb(240, 240, 240));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 766px) {
+  body {
+    margin: 0;
+  }
+  .wrapper {
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(1, 7, 33);
+    background: linear-gradient(
+      90deg,
+      rgba(1, 7, 33, 0.9668242296918768) 0%,
+      rgba(100, 52, 122, 1) 42%,
+      rgba(83, 45, 104, 1) 67%,
+      rgba(0, 9, 13, 1) 100%
+    );
+  }
+}
+
+.wrapper {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg, rgba(0, 0, 0, 1) 0%,
+    rgba(35, 41, 44, 1) 31%,
+    rgba(40, 47, 50, 1) 49%,
+    rgba(31, 36, 38, 1) 65%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.card {
+  transition: transform 0.2s;
+  background-color: black;
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+}

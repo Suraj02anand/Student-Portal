@@ -1,0 +1,21 @@
+body{
+    margin: 0%;
+    background-image: url("../images/img-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type="submit"]:hover{
+    transform: scale(0.9);
+    background-color: darkslategray;
+    color: white;
+}
