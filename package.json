@@ -8,6 +8,9 @@
   },
   "author": "Suraj",
   "license": "ISC",
+  "engines": {
+    "node": "16.13.2"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-flash": "^0.1.1",

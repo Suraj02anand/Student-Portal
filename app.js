@@ -86,6 +86,6 @@ app.use("/student", studentRoute);
 app.use("/teacher", teacherRoute);
 app.use("/admin", adminRoute);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server is up and running");
 });
